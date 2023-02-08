@@ -4,7 +4,7 @@ export const parentCategories = [
         title: 'Hombres',
         slug: 'hombre',
         icon: '',
-        subcategories: [1, 2, 3, 4, 5],
+        categories: [1, 2, 3, 4, 5],
         priority: false,
     },
     {
@@ -12,7 +12,7 @@ export const parentCategories = [
         title: 'Mujeres',
         slug: 'mujer',
         icon: '',
-        subcategories: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+        categories: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
         priority: true,
     },
     {
@@ -20,7 +20,7 @@ export const parentCategories = [
         title: 'Belleza',
         slug: 'belleza',
         icon: '',
-        subcategories: [16, 14, 17, 18],
+        categories: [16, 14, 17, 18],
         priority: false,
     },
     {
@@ -28,7 +28,7 @@ export const parentCategories = [
         title: 'Juegos/Entretenimiento',
         slug: 'juegos-y-entretenimiento',
         icon: '',
-        subcategories: [19, 20],
+        categories: [19, 20],
         priority: false,
     },
 ]
