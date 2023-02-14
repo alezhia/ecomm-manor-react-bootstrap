@@ -1,11 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from './components/Navbar'
+import NavBar from './components/NavBar'
 import { Home, Shop, Cart } from './pages'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:slugProduct' element={<Home />} />
