@@ -4,7 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from 'react-router-dom';
-import { parentCategories, categories } from '../utils/mock-data';
+import {parentCategories} from '../utils/mock-data/parentCategories';
+import {categories} from '../utils/mock-data/categories';
 import '../styles/NavBar.css';
 
 const NavBar = () => {
@@ -19,7 +20,7 @@ const NavBar = () => {
             parentCategories.map(pCat => (
               <NavDropdown key={pCat.id} title={pCat.title.toUpperCase()} id="collasible-nav-dropdown">
                 {
-                  categories.map(cat => pCat.categories.includes(cat.id) && <NavDropdown.Item key={cat.id} href={cat.slug}>{cat.title}</NavDropdown.Item>)
+                  categories.map(cat => pCat.categories.includes(cat.id) && <NavDropdown.Item key={cat.id} href={cat.slug} className={cat.priority ? 'activo' : ''}>{cat.title}</NavDropdown.Item>)
                 }
               </NavDropdown>
             ))
