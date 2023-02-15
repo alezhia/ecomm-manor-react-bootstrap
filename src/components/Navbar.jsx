@@ -35,12 +35,4 @@ const NavBar = () => {
   )
 }
 
-// function Priority(priority) {
-//   return (
-//     <div className={priority ? 'activo' : ''}/>
-    
-//   )
-// }
-
-
 export default NavBar
