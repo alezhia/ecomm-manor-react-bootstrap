@@ -364,5 +364,48 @@ export const products = [
         categories: [17, 18],
         priority: false
     },
+    {
+        id: '964217',
+        title: 'Pista Big Orange Die Cast Garage de Policía',
+        description: 'Edad recomendada: A partir de 3 años, Pista de autos, Incluye: Vehículos, Medidas (Alt x Anch x Prof): 18.5 x 46 x 62 cm',
+        brand:"BIG ORANGE",
+        price: 29.90,
+        stock: 100,
+        images: [
+            'https://wongfood.vteximg.com.br/arquivos/ids/585522/Pista-Big-Orange-Die-Cast-Garage-de-Polic-a-1-307277606.jpg?v=638007636901270000',
+            'https://wongfood.vteximg.com.br/arquivos/ids/585370/Pista-Big-Orange-Die-Cast-Garage-de-Polic-a-2-307277606.jpg?v=638007627049300000'
+        ],
+        categories: [20],
+        priority: false
+    },
+    {
+        id: '967855',
+        title: 'Scooter con Luz y Música 3 Ruedas Disney Minnie',
+        description: 'Número de ruedas: 3, Scooter infantil, Con luz y música, Canastilla delantera',
+        brand:"DISNEY",
+        price: 119.90,
+        stock: 100,
+        images: [
+            'https://wongfood.vteximg.com.br/arquivos/ids/601738/Scooter-con-Luz-y-M-sica-3-Ruedas-Disney-Minnie-1-316880357.jpg?v=638054697937600000'
+        ],
+        categories: [20],
+        priority: false
+    },
+    {
+        id: '960113',
+        title: 'Juego de Mesa Monopoly Descubre Jugando',
+        description: 'Edad recomendada: A partir de 7, Número de jugadores: 2 a 6, Cuenta con un tablero de juego de doble cara con 2 niveles',
+        brand:"MONOPOLY",
+        price: 149.90,
+        stock: 100,
+        images: [
+            'https://wongfood.vteximg.com.br/arquivos/ids/534605/Monopoly-Descubre-Jugando-1-283969710.jpg?v=637838343139100000',
+            'https://wongfood.vteximg.com.br/arquivos/ids/534411/Monopoly-Descubre-Jugando-2-283969710.jpg?v=637838312392830000',
+            'https://wongfood.vteximg.com.br/arquivos/ids/534412/Monopoly-Descubre-Jugando-3-283969710.jpg?v=637838312394870000',
+            'https://wongfood.vteximg.com.br/arquivos/ids/534413/Monopoly-Descubre-Jugando-4-283969710.jpg?v=637838312397830000'
+        ],
+        categories: [19],
+        priority: false
+    },
 ]
 
