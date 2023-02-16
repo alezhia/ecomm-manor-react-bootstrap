@@ -1,4 +1,5 @@
 import {useState} from "react"
+
 const Carousel = ({images, alt}) => {
 
     const [indice,setIndice] = useState(0)
