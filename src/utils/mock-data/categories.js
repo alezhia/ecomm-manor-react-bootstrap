@@ -10,7 +10,7 @@ export const categories = [
         id: 2,
         title: 'Ropa',
         slug: 'ropa-para-hombre',
-        icon: 'https://www.flaticon.es/icono-gratis/ropa-masculina_2331716?term=ropa&page=1&position=5&origin=search&related_id=2331716',
+        icon: 'https://cdn-icons-png.flaticon.com/512/2331/2331716.png',
         priority: false,
     },
     {
@@ -45,7 +45,7 @@ export const categories = [
         id: 7,
         title: 'Ropa',
         slug: 'ropa-para-mujer',
-        icon: 'https://www.flaticon.es/icono-gratis/vestir_1785375?term=ropa&page=1&position=11&origin=search&related_id=1785375',
+        icon: 'https://cdn-icons-png.flaticon.com/512/1785/1785375.png',
         priority: false,
     },
     {

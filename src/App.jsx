@@ -1,15 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from './components/Navbar'
+import { NavBar } from './components'
 import { Home, Shop, Cart, Page404 } from './pages'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/:slugProduct' element={<Home />} />
-        <Route path='/tienda/:slugCategory' element={<Shop />} />
+        <Route path='/:slug' element={<Shop />} />
         <Route path='/carrito' element={<Cart />} />
         <Route path="*" element={<Page404/>} />
       </Routes>
