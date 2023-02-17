@@ -8,8 +8,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/:slugProduct' element={<Home />} />
-        <Route path='/tienda/:slugCategory' element={<Shop />} />
+        <Route path='/:slug' element={<Shop />} />
         <Route path='/carrito' element={<Cart />} />
         <Route path="*" element={<Page404/>} />
       </Routes>
