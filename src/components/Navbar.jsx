@@ -20,7 +20,7 @@ const NavBar = () => {
             parentCategories.map(pCat => (
               <NavDropdown key={pCat.id} title={pCat.title.toUpperCase()} id="collasible-nav-dropdown">
                 {
-                  categories.map(cat => pCat.categories.includes(cat.id) && <NavDropdown.Item key={cat.id} href={cat.slug} className={cat.priority ? 'activo' : ''}>{cat.title}</NavDropdown.Item>)
+                  categories.map(cat => pCat.categories.includes(cat.id) && <NavDropdown.Item key={cat.id} href={cat.slug} className={cat.priority ? 'activo' : ''}>{cat.title}{cat.icon}</NavDropdown.Item>)
                 }
               </NavDropdown>
             ))
