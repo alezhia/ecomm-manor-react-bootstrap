@@ -2,10 +2,10 @@ import { useParams } from 'react-router-dom'
 import { ItemListContainer } from '../containers'
 
 const Shop = () => {
-    const { slugCategory } = useParams()
+    const { slug } = useParams()
     
     return (
-        <ItemListContainer slugCategory={slugCategory} />
+        <ItemListContainer slugCategory={slug} />
     )
   }
   
