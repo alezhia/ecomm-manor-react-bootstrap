@@ -17,12 +17,35 @@ const Carousel = ({images, alt}) => {
             <div className="carousel-inner">
                 <div className="carousel-item active p-5" style={{height:"350px"}}>
                     <img src={images[indice]} className="w-100 h-100 d-flex justify-content-center align-items-center" alt={"foto"+alt}/>
-                    {images.length>1&&<div className="d-flex justify-content-evenly align-items-center w-100">
+                    {images.length>1&&
+                    <div className="w-100 h-25 d-flex justify-content-evenly align-items-center ">
                         {images.map((elem)=>{
                             if (images.indexOf(elem)!==indice){
-                                return(<div> - </div>)
+                                return(
+                                    <div
+                                        onClick={()=>{setIndice(images.indexOf(elem))}}
+                                        style={{
+                                            width:"20px",
+                                            height:"20px",
+                                            backgroundColor:"transparent",
+                                            border:"1px solid #d69c4f",
+                                            borderRadius:"100%"
+                                        }}>
+                                    </div>
+                                )
                             }else{
-                                return(<div> + </div>)
+                                return(
+                                    <div
+                                        onClick={()=>{setIndice(images.indexOf(elem))}}
+                                        style={{
+                                            width:"20px",
+                                            height:"20px",
+                                            backgroundColor:"#d69c4f",
+                                            border:"none",
+                                            borderRadius:"100%"
+                                        }}>
+                                    </div>
+                                )
                             }
                         })}
                     </div>}
