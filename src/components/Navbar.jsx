@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <Navbar className='navbar navbar-dark bg-dark' expand="lg">
     <Container>
-      <Navbar.Brand href="#home"><img src={logo} alt=" Manor Logo " width="90px" /></Navbar.Brand>
+      <NavLink to={"/"}><img src={logo} alt=" Manor Logo " width="90px" /></NavLink>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
