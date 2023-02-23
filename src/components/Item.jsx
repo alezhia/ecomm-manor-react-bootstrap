@@ -1,4 +1,6 @@
 import "../styles/items.css"
+import { slugIt } from "../utils/createSlug"
+import {Link,useParams} from "react-router-dom"
 import { Carousel } from "./index"
 const Item = ({item}) => {
     return(
@@ -9,13 +11,9 @@ const Item = ({item}) => {
                 <p className="card-text  m-1">Marca: {item.brand}</p>
                 <p className="card-text  m-1">Precio: USD {item.price}</p>
                 <p className="card-text  m-1">Existencias: {item.stock}</p>
-                <a href="#" className="text-decoration-none" >
-                    <button className="btn-detalles">
-                        <span>
-                            Detalles
-                        </span>
-                    </button>
-                </a>
+                <Link className="text-decoration-none btn-detalles" to={`/${slugIt(item.title)}`}>
+                    <span>Detalles</span>
+                </Link>
             </div>
         </div>
     )
