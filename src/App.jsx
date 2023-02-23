@@ -1,4 +1,6 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Carousel } from "./components/carousel"
 import Navbar from './components/Navbar'
 import { Home, Shop, Cart, Page404 } from './pages'
 
@@ -6,6 +8,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      <Carousel />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:slugProduct' element={<Home />} />
