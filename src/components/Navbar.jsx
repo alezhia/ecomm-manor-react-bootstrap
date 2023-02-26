@@ -58,7 +58,7 @@ const NavBar = () => {
                         ))}
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="cart">
+                        <Nav.Link as={Link} to="carrito">
                             CartWidget
                         </Nav.Link>
                     </Nav>
