@@ -35,8 +35,8 @@ const NavBar = () => {
                                                     to={cat.slug}
                                                     className={
                                                         cat.priority
-                                                            ? "activo"
-                                                            : ""
+                                                            ? "activo text-decoration-none link-dark"
+                                                            : "text-decoration-none link-dark"
                                                     }
                                                 >
                                                     {cat.title}
