@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import Dropdown from "react-bootstrap/Dropdown"
 import { Link, NavLink } from "react-router-dom"
 import { parentCategories } from "../utils/mock-data/parentCategories"
 import { categories } from "../utils/mock-data/categories"
@@ -35,21 +36,22 @@ const NavBar = () => {
                                                     to={cat.slug}
                                                     className={
                                                         cat.priority
-                                                            ? "activo text-decoration-none link-dark"
-                                                            : "text-decoration-none link-dark"
+                                                            ? "activo text-decoration-none text-reset"
+                                                            : "text-decoration-none text-reset"
                                                     }
                                                 >
-                                                    {cat.title}
-                                                    {cat.icon && (
-                                                        <Image
-                                                            src={cat.icon}
-                                                            width="30px"
-                                                            thumbnail
-                                                            fluid
-                                                            // roundedCircle
-                                                            className="ms-2 border-0"
-                                                        />
-                                                    )}
+                                                    <NavDropdown.Item href="/">
+                                                        {cat.title}
+                                                        {cat.icon && (
+                                                            <Image
+                                                                src={cat.icon}
+                                                                width="30px"
+                                                                thumbnail
+                                                                fluid
+                                                                className="ms-2 border-0"
+                                                            />
+                                                        )}
+                                                    </NavDropdown.Item>
                                                 </NavLink>
                                             )
                                     )}
