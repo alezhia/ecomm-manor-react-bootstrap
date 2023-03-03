@@ -1,18 +1,27 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LoginButton from "./components/LoginButton"
 import LogoutButton from "./components/LogoutButton"
-import Navbar from './components/Navbar'
 import Profile from "./components/Profile"
+import Navbar from './components/Navbar'
 import { Home, Shop, Cart, Page404 } from './pages'
 
 
 const App = () => {
+  const { isAuthenticated } = useAuth0()
   return (
     <BrowserRouter>
       <Navbar />
-    <LoginButton />
-    <LogoutButton />
-    <Profile />
+
+     {isAuthenticated ? (
+          <>
+            <Profile />
+            <LogoutButton />
+          </>
+        ) : (
+          <LoginButton />
+        )}
+        
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:slugProduct' element={<Home />} />

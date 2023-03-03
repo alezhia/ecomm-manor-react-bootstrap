@@ -7,6 +7,10 @@ import {Link} from 'react-router-dom';
 import {parentCategories} from '../utils/mock-data/parentCategories';
 import {categories} from '../utils/mock-data/categories';
 import '../styles/NavBar.css';
+import LoginButton from './LoginButton';
+import Profile from './Profile';
+import LogoutButton from './LogoutButton';
+
 
 const NavBar = () => {
   return (
@@ -29,6 +33,9 @@ const NavBar = () => {
         <Nav>
         <Nav.Link as={Link} to="cart">CartWidget</Nav.Link>
         </Nav>
+        {/* <LoginButton/>
+        <Profile/>
+        <LogoutButton/> */}
       </Navbar.Collapse>
     </Container>
   </Navbar>
