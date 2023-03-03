@@ -13,14 +13,7 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
 
-     {isAuthenticated ? (
-          <>
-            <Profile />
-            <LogoutButton />
-          </>
-        ) : (
-          <LoginButton />
-        )}
+     {isAuthenticated &&  <Profile />}
         
       <Routes>
         <Route path='/' element={<Home />} />

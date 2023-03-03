@@ -10,9 +10,11 @@ import '../styles/NavBar.css';
 import LoginButton from './LoginButton';
 import Profile from './Profile';
 import LogoutButton from './LogoutButton';
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavBar = () => {
+  const { isAuthenticated } = useAuth0()
+
   return (
     <Navbar className='navbar navbar-dark bg-dark' expand="lg">
     <Container>
@@ -33,9 +35,11 @@ const NavBar = () => {
         <Nav>
         <Nav.Link as={Link} to="cart">CartWidget</Nav.Link>
         </Nav>
-        {/* <LoginButton/>
-        <Profile/>
-        <LogoutButton/> */}
+        {isAuthenticated ? (
+            <LogoutButton />
+        ) : (
+          <LoginButton />
+        )}
       </Navbar.Collapse>
     </Container>
   </Navbar>
