@@ -1,24 +1,11 @@
 import "../styles/items.css"
 import { Carousel } from "./index"
-import { MdFavoriteBorder } from "react-icons/md"
-import { useContext } from "react"
-import { FavsContext } from "../contexts/FavsContext"
+import FavsWidget from "./FavsWidget"
 
 const Item = ({ item }) => {
-    const { favsItems, isInFavs, handlerFavs } = useContext(FavsContext)
-
     return (
         <div className="card text-center h-100" style={{ width: "18rem" }}>
-            <div className="text-end me-2 mb-1 fs-3 text-muted">
-                <button
-                    onClick={() => {
-                        handlerFavs(item)
-                    }}
-                    className="bg-transparent p-0 border-0"
-                >
-                    <MdFavoriteBorder />
-                </button>
-            </div>
+            <FavsWidget item={item} />
             <Carousel images={item.images} alt={item.title} />
             <div className="card-body d-flex flex-column justify-content-between">
                 <h5 className="card-title m-2">{item.title}</h5>
