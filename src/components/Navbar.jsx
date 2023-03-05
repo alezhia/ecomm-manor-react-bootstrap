@@ -8,7 +8,6 @@ import {parentCategories} from '../utils/mock-data/parentCategories';
 import {categories} from '../utils/mock-data/categories';
 import '../styles/NavBar.css';
 import LoginButton from './LoginButton';
-import Profile from './Profile';
 import LogoutButton from './LogoutButton';
 import { useAuth0 } from "@auth0/auth0-react";
 
