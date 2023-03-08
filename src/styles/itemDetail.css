@@ -6,3 +6,19 @@
 .itemDetail-miniImages:hover{
     filter: grayscale(0);
 }
+
+.react-icons{
+    color: #d69c4f;
+    font-size: 1.5em;
+}
+
+.react-iconsBack:hover{
+    color: #00f968;
+}
+.react-iconsFav:hover{
+    color: #f90000;
+}
+.react-iconsCart:hover{
+    color: #0000f9;
+    background-color: #d69c4f;
+}

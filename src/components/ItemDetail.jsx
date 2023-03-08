@@ -2,6 +2,8 @@ import {Link, useParams } from "react-router-dom"
 import {useState} from "react"
 import { products } from '../utils/mock-data/products'
 import { slugIt } from "../utils/createSlug"
+import { IconContext } from "react-icons"
+import {BsCartPlus,BsHeart,BsArrowLeftCircle} from "react-icons/bs"
 import "../styles/itemDetail.css"
 const ItemDetail=()=>{
     const slugId=useParams()
@@ -32,17 +34,19 @@ const ItemDetail=()=>{
                         <p>Stock: {item.stock} Un.</p>
                     </div>
                 </div>
-                <div className="d-flex p-1 w-100">
-                    <Link className="btn-detalles w-50 mx-1 p-2 border text-decoration-none" to={`/${slug.slug}`}>
-                        <span>Atras</span>
-                    </Link>
-                    <Link className="btn-detalles w-50 mx-1 p-2 border text-decoration-none" to={"/"}>
-                        <span>Favoritos</span>
-                    </Link>
-                    <Link className="btn-detalles w-50 mx-1 p-2 border text-decoration-none" to={"/"}>
-                        <span>Comprar</span>
-                    </Link>
-                </div>
+                <IconContext.Provider value={{className:"react-icons"}}>
+                    <div className="d-flex p-1 w-100">
+                        <Link className="w-50 mx-1 p-2 border text-decoration-none" to={`/${slug.slug}`}>
+                            <BsArrowLeftCircle className="react-iconsBack"/>
+                        </Link>
+                        <Link className="w-50 mx-1 p-2 border text-decoration-none" to={"/"}>
+                            <BsHeart className="react-iconsFav"/>
+                        </Link>
+                        <Link className="react-iconsCart w-50 mx-1 p-2 border text-decoration-none" to={"/"}>
+                            <BsCartPlus />
+                        </Link>
+                    </div>
+                </IconContext.Provider>
             </div>    
         </div>
     )
