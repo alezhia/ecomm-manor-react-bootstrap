@@ -1,11 +1,9 @@
 import "../styles/FavsWidget.css"
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md"
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { FavsContext } from "../contexts/FavsContext"
 
 const FavsWidget = ({ item }) => {
-    const [favIcon, setFavIcon] = useState([false])
-
     const { favsItems, handlerFavs, isInFavs } = useContext(FavsContext)
 
     console.log(favsItems)
