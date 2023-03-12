@@ -20,8 +20,7 @@
 }
 
 .btn-react-opt{
-    padding: 1px;
-    margin: 1px;
+    padding: 5px;
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -33,32 +32,35 @@
 
 .btn-back,.btn-addFav,.btn-addCart{
     transition: all .5s ease-in-out;
-    position: absolute;
-    top: 0;
     color: transparent;
+    letter-spacing: 1.5px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .btn-react-opt:hover .btn-back{
-    transition: all .5s ease-in-out;
-    display: flex;
-    position: absolute;
-    top: -50%;
     color: #101010;
-    
+    transform: translateX(50%);
 }
-
 .btn-react-opt:hover .btn-addFav{
-    transition: all .5s ease-in-out;
-    display: flex;
-    position: absolute;
-    top: -50%;
     color: #101010;
+    transform: translateX(50%);
+}
+.btn-react-opt:hover .btn-addCart{
+    color: #101010;
+    transform: translateX(50%);
+}
+.btn-react-opt:hover .btn-react-icons{
+    animation: react-icons-dance .5s linear infinite alternate;
+    transform: translateX(-100%);
 }
 
-.btn-react-opt:hover .btn-addCart{
-    transition: all .5s ease-in-out;
-    display: flex;
-    position: absolute;
-    top: -50%;
-    color: #101010;
+@keyframes react-icons-dance {
+    0%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(-5%);
+    }
 }
