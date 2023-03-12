@@ -36,15 +36,24 @@ const ItemDetail=()=>{
                 </div>
                 <IconContext.Provider value={{className:"react-icons"}}>
                     <div className="d-flex justify-content-evenly p-1 w-100">
-                        <Link className="btn-detalles w-25 mx-1 p-2 border text-decoration-none" to={`/${slug.slug}`}>
-                            <BsArrowLeftCircle className="btn-react-icons"/>
-                        </Link>
-                        <Link className="btn-detalles w-25 mx-1 p-2 border text-decoration-none" to={"/"}>
-                            <BsHeart className="btn-react-icons "/>
-                        </Link>
-                        <Link className="btn-detalles react-iconsCart w-25 mx-1 p-2 border text-decoration-none" to={"/"}>
-                            <BsCartPlus className="btn-react-icons" />
-                        </Link>
+                        <div className="btn-react-opt">
+                            <Link className="btn-detalles w-100 m-1 p-2 border text-decoration-none" to={`/${slug.slug}`}>
+                                <BsArrowLeftCircle className="btn-react-icons"/>
+                            </Link>
+                            <div className="btn-back">Volver atras</div>
+                        </div>
+                        <div className="btn-react-opt">
+                            <Link className="btn-detalles w-100 m-1 p-2 border text-decoration-none" to={"/"}>
+                                <BsHeart className="btn-react-icons "/>
+                            </Link>
+                            <div className="btn-addFav">Agregar a favoritos</div>
+                        </div>
+                        <div className="btn-react-opt">
+                            <Link className="btn-detalles react-iconsCart w-100 m-1 p-2 border text-decoration-none" to={"/"}>
+                                <BsCartPlus className="btn-react-icons" />
+                            </Link>
+                            <div className="btn-addCart">Agregar al carrito</div>
+                        </div>
                     </div>
                 </IconContext.Provider>
             </div>    
