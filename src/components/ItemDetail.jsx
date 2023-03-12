@@ -40,19 +40,19 @@ const ItemDetail=()=>{
                             <Link className="btn-detalles w-100 m-1 p-2 border text-decoration-none" to={`/${slug.slug}`}>
                                 <BsArrowLeftCircle className="btn-react-icons"/>
                             </Link>
-                            <div className="btn-back">Volver atras</div>
+                            <div className="btn-back">Atras</div>
                         </div>
                         <div className="btn-react-opt">
                             <Link className="btn-detalles w-100 m-1 p-2 border text-decoration-none" to={"/"}>
                                 <BsHeart className="btn-react-icons "/>
                             </Link>
-                            <div className="btn-addFav">Agregar a favoritos</div>
+                            <div className="btn-addFav">Favoritos</div>
                         </div>
                         <div className="btn-react-opt">
                             <Link className="btn-detalles react-iconsCart w-100 m-1 p-2 border text-decoration-none" to={"/"}>
                                 <BsCartPlus className="btn-react-icons" />
                             </Link>
-                            <div className="btn-addCart">Agregar al carrito</div>
+                            <div className="btn-addCart">Carrito</div>
                         </div>
                     </div>
                 </IconContext.Provider>
