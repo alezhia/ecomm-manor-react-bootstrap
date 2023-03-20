@@ -25,6 +25,7 @@ const Carousel = ({images, alt}) => {
                                     <div
                                         onClick={()=>{setIndice(images.indexOf(elem))}}
                                         style={{
+                                            cursor:"pointer",
                                             width:"20px",
                                             height:"20px",
                                             backgroundColor:"transparent",
@@ -38,6 +39,7 @@ const Carousel = ({images, alt}) => {
                                     <div
                                         onClick={()=>{setIndice(images.indexOf(elem))}}
                                         style={{
+                                            cursor:"pointer",
                                             width:"20px",
                                             height:"20px",
                                             backgroundColor:"#d69c4f",
