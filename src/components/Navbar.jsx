@@ -3,18 +3,20 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
-import { Link } from "react-router-dom"
+import Dropdown from "react-bootstrap/Dropdown"
+import { Link, NavLink } from "react-router-dom"
 import { parentCategories } from "../utils/mock-data/parentCategories"
 import { categories } from "../utils/mock-data/categories"
 import "../styles/NavBar.css"
+import Image from "react-bootstrap/Image"
 
 const NavBar = () => {
     return (
         <Navbar className="navbar navbar-dark bg-dark" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">
+                <NavLink to={"/"}>
                     <img src={logo} alt=" Manor Logo " width="90px" />
-                </Navbar.Brand>
+                </NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -22,27 +24,43 @@ const NavBar = () => {
                             <NavDropdown
                                 key={pCat.id}
                                 title={pCat.title.toUpperCase()}
-                                id="collasible-nav-dropdown"
                             >
-                                {categories.map(
-                                    (cat) =>
-                                        pCat.categories.includes(cat.id) && (
-                                            <NavDropdown.Item
-                                                key={cat.id}
-                                                href={cat.slug}
-                                                className={
-                                                    cat.priority ? "activo" : ""
-                                                }
-                                            >
-                                                {cat.title}
-                                            </NavDropdown.Item>
-                                        )
-                                )}
+                                <div className="d-flex flex-column">
+                                    {categories.map(
+                                        (cat) =>
+                                            pCat.categories.includes(
+                                                cat.id
+                                            ) && (
+                                                <NavLink
+                                                    key={cat.id}
+                                                    to={cat.slug}
+                                                    className={
+                                                        cat.priority
+                                                            ? "activo text-decoration-none text-reset"
+                                                            : "text-decoration-none text-reset"
+                                                    }
+                                                >
+                                                    <NavDropdown.Item href="/">
+                                                        {cat.title}
+                                                        {cat.icon && (
+                                                            <Image
+                                                                src={cat.icon}
+                                                                width="30px"
+                                                                thumbnail
+                                                                fluid
+                                                                className="ms-2 border-0"
+                                                            />
+                                                        )}
+                                                    </NavDropdown.Item>
+                                                </NavLink>
+                                            )
+                                    )}
+                                </div>
                             </NavDropdown>
                         ))}
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="cart">
+                        <Nav.Link as={Link} to="carrito">
                             CartWidget
                         </Nav.Link>
                     </Nav>

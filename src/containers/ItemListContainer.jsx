@@ -18,7 +18,7 @@ const ItemListContainer = ({ slugCategory }) => {
     
     useEffect(() => {
         setCategory(getCategoryDetails(slugCategory))
-    }, [])
+    }, [slugCategory])
 
     return (
         <div className="d-flex flex-column w-100 p-2 h-auto justify-content-center align-items-center">
