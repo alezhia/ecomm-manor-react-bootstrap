@@ -1,0 +1,60 @@
+.btn-detalles {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 6px 24px 0px #d69c4f66;
+    overflow: hidden;
+    border: 1px solid #d69c4f;
+   }
+   
+   .btn-detalles:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #d69c4f;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+   }
+   
+   .btn-detalles:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+   }
+   
+   .btn-detalles span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    letter-spacing: 2px;
+    color: #101010;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   .btn-detalles:hover span {
+    color: #f5f5f5;
+    animation: scaleUp 0.3s ease-in-out;
+   }
+
+   @keyframes scaleUp {
+    0% {
+     transform: scale(1);
+    }
+   
+    50% {
+     transform: scale(0.95);
+    }
+   
+    100% {
+     transform: scale(1);
+    }
+   }
+   

@@ -1,8 +1,8 @@
 .navbar {
     font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .activo {
-    background: blueviolet!important;
+    background: #e5fdd1 !important;
 }
