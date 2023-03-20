@@ -2,10 +2,13 @@ import "../styles/items.css"
 import { slugIt } from "../utils/createSlug"
 import {Link,useParams} from "react-router-dom"
 import { Carousel } from "./index"
+import FavsWidget from "./FavsWidget"
+
 const Item = ({item}) => {
     const slug=useParams();
     return(
         <div className="card text-center h-100" style={{width: "18rem"}}>
+            <FavsWidget item={item} />
             <Carousel images={item.images} alt={item.title}/>
             <div className="card-body d-flex flex-column justify-content-between">
                 <h5 className="card-title m-2">{item.title}</h5>
