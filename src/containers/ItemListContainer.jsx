@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { products } from '../utils/mock-data/products'
 import { categories } from '../utils/mock-data/categories'
 import { Breadcrumb } from '../components'
+import {Item} from "../components"
 
 const ItemListContainer = ({ slugCategory }) => {
     const [category, setCategory] = useState({})
@@ -20,24 +21,18 @@ const ItemListContainer = ({ slugCategory }) => {
     }, [])
 
     return (
-        <>
+        <div className="d-flex flex-column w-100 p-2 h-auto justify-content-center align-items-center">
             <Breadcrumb categoryTitle={category.title} />
-            <ul>
+            <ul className="d-flex w-100 h-auto flex-wrap justify-content-start">
                 {
                     items.map(item => (
-                        <li key={item.id}>
-                            <div>
-                                <b>{item.title}</b><br />
-                                Descripcion: {item.description}<br />
-                                Marca: {item.brand}<br />
-                                Precio: USD {item.price}<br />
-                                Existencias: {item.stock}<br />
-                            </div>
+                        <li key={item.id} className="list-unstyled m-1">
+                            <Item item={item}/>
                         </li>
                     ))
                 }
             </ul>
-        </>
+        </div>
     )
 }
 
