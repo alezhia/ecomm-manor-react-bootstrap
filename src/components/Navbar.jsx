@@ -9,8 +9,12 @@ import { parentCategories } from "../utils/mock-data/parentCategories"
 import { categories } from "../utils/mock-data/categories"
 import "../styles/NavBar.css"
 import Image from "react-bootstrap/Image"
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavBar = () => {
+    const { isAuthenticated } = useAuth0()
     return (
         <Navbar className="navbar navbar-dark bg-dark" expand="lg">
             <Container>
@@ -64,6 +68,11 @@ const NavBar = () => {
                             CartWidget
                         </Nav.Link>
                     </Nav>
+        {isAuthenticated ? (
+            <LogoutButton />
+        ) : (
+          <LoginButton />
+        )}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

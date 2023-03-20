@@ -1,14 +1,18 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Profile from "./components/Profile"
 import Navbar from "./components/Navbar"
 import { Home, Shop, Cart, Page404 } from "./pages"
 import FavsContextProvider from "../src/contexts/FavsContext"
 import { ItemDetail } from "./components"
 
 const App = () => {
+    const { isAuthenticated } = useAuth0()
     return (
         <FavsContextProvider>
             <BrowserRouter>
                 <Navbar />
+                {isAuthenticated &&  <Profile />}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/:slug" element={<Shop />} />
