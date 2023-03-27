@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import { Home, Shop, Cart, Page404 } from "./pages"
 import FavsContextProvider from "../src/contexts/FavsContext"
 import { ItemDetail } from "./components"
+import { Carousel } from "./components/Carousel"
 
 const App = () => {
     const { isAuthenticated } = useAuth0()
@@ -12,6 +13,7 @@ const App = () => {
         <FavsContextProvider>
             <BrowserRouter>
                 <Navbar />
+                <Carousel />
                 {isAuthenticated &&  <Profile />}
                 <Routes>
                     <Route path="/" element={<Home />} />

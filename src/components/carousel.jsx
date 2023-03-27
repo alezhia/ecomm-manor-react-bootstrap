@@ -1,70 +1,41 @@
-import {useState} from "react"
+import React from 'react';
+import {
+  MDBCarousel,
+  MDBCarouselItem,
+} from 'mdb-react-ui-kit';
 
-const Carousel = ({images, alt}) => {
+export function Carousel() {
+  return (
+    <MDBCarousel showIndicators showControls fade>
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={1}
+        src='https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg'
+        alt='...'
+      >
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </MDBCarouselItem>
 
-    const [indice,setIndice] = useState(0)
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={2}
+        src='https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg'
+        alt='...'
+      >
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </MDBCarouselItem>
 
-    const cambioIndice=(valor)=>{
-        if (valor){
-            indice<images.length-1?setIndice(indice+1):setIndice(0)
-        }else{
-            indice>0?setIndice(indice-1):setIndice(images.length-1)
-        }
-    }
-
-    return(
-        <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true">
-            <div className="carousel-inner">
-                <div className="carousel-item active p-5" style={{height:"350px"}}>
-                    <img src={images[indice]} className="w-100 h-100 d-flex justify-content-center align-items-center" alt={"foto"+alt}/>
-                    {images.length>1&&
-                    <div className="w-100 h-25 d-flex justify-content-evenly align-items-center ">
-                        {images.map((elem)=>{
-                            if (images.indexOf(elem)!==indice){
-                                return(
-                                    <div
-                                        onClick={()=>{setIndice(images.indexOf(elem))}}
-                                        style={{
-                                            cursor:"pointer",
-                                            width:"20px",
-                                            height:"20px",
-                                            backgroundColor:"transparent",
-                                            border:"1px solid #d69c4f",
-                                            borderRadius:"100%"
-                                        }}>
-                                    </div>
-                                )
-                            }else{
-                                return(
-                                    <div
-                                        onClick={()=>{setIndice(images.indexOf(elem))}}
-                                        style={{
-                                            cursor:"pointer",
-                                            width:"20px",
-                                            height:"20px",
-                                            backgroundColor:"#d69c4f",
-                                            border:"none",
-                                            borderRadius:"100%"
-                                        }}>
-                                    </div>
-                                )
-                            }
-                        })}
-                    </div>}
-                </div>
-            </div>
-            {images.length>1
-            &&<>
-                <button onClick={()=>{cambioIndice(false)}} className="carousel-control-prev" style={{backgroundColor:"#d69c4f"}} type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button onClick={()=>{cambioIndice(true)}} className="carousel-control-next" style={{backgroundColor:"#d69c4f"}} type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </>}
-        </div>
-    )
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={3}
+        src='https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg'
+        alt='...'
+      >
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </MDBCarouselItem>
+    </MDBCarousel>
+  );
 }
-export default Carousel
