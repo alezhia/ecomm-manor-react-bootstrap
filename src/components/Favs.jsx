@@ -11,18 +11,18 @@ const Favs = ({ item }) => {
 
     return (
         <Row className="d-flex align-items-center m-0">
-            <Col md={3} className="ps-0">
+            <Col md={2} className="ps-0">
                 <Image
                     src={item.image}
                     alt={item.title}
                     style={{ width: "10rem" }}
                 />
             </Col>
-            <Col md={6}>
-                <h4 className="description-title mb-0">{item.title}</h4>
+            <Col md={7}>
+                <h4 className="description-title mb-0 ms-5">{item.title}</h4>
             </Col>
             <Col md={2}>
-                <h4 className="mb-0">{item.price}</h4>
+                <h4 className="mb-0 text-center">{item.price}</h4>
             </Col>
             <Col md={1} className="pe-0">
                 <FaTrashAlt
