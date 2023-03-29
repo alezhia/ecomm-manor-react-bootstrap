@@ -1,9 +1,10 @@
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Profile from "./components/Profile"
 import Navbar from "./components/Navbar"
 import { Home, Shop, Cart, Page404 } from "./pages"
 import FavsContextProvider from "../src/contexts/FavsContext"
+import FavsContainer from "../src/containers/FavsContainer"
 import { ItemDetail } from "./components"
 import { Carousel } from "./components/Carousel"
 
@@ -14,12 +15,13 @@ const App = () => {
             <BrowserRouter>
                 <Navbar />
                 <Carousel />
-                {isAuthenticated &&  <Profile />}
+                {isAuthenticated && <Profile />}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/:slug" element={<Shop />} />
-                    <Route path='/:slug/:slugId' element={<ItemDetail />} />
+                    <Route path="/:slug/:slugId" element={<ItemDetail />} />
                     <Route path="/carrito" element={<Cart />} />
+                    <Route path="/favoritos" element={<FavsContainer />} />
                     <Route path="*" element={<Page404 />} />
                 </Routes>
             </BrowserRouter>
