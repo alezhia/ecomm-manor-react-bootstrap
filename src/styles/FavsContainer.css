@@ -1,0 +1,3 @@
+.fav-item li:nth-child(odd) {
+    background-color: rgba(214, 155, 79, 0.15);
+}
