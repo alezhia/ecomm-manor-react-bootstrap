@@ -7,6 +7,11 @@
     filter: grayscale(0);
 }
 
+.item-detail-info{
+    background-color: #d69c4f66;
+    border-radius: 0 0 100% 50%;
+}
+
 .react-icons{
     color: #d69c4f;
     font-size: 1.5em;
@@ -49,11 +54,10 @@
 }
 .btn-react-opt:hover .btn-addCart{
     color: #101010;
-    transform: translateX(50%);
+    transform: translateX(-100%);
 }
 .btn-react-opt:hover .btn-react-icons{
     animation: react-icons-dance .5s linear infinite alternate;
-    transform: translateX(-100%);
 }
 
 @keyframes react-icons-dance {

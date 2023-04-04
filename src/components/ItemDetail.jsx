@@ -24,7 +24,7 @@ const ItemDetail=()=>{
                 </div>
             </div>
             <div style={{border:"2px dashed #d69c4f"}} className="my-lg-0 my-3 w-lg-50 w-100 d-flex flex-column justify-content-evenly align-items-center text-center">
-                <div className="d-flex p-2 flex-column w-100 h-100 justify-content-between align-items-center text-center ">
+                <div className="item-detail-info d-flex p-2 flex-column w-100 h-100 justify-content-between align-items-center text-center">
                     <h2 className="h-25 d-flex justify-content-center align-items-center">
                         {item.title}
                     </h2>
@@ -36,19 +36,19 @@ const ItemDetail=()=>{
                 </div>
                 <IconContext.Provider value={{className:"react-icons"}}>
                     <div className="d-flex justify-content-evenly p-1 w-100">
-                        <div className="btn-react-opt">
+                        <div className="btn-react-opt w-25">
                             <Link className="btn-detalles w-100 m-1 p-2 border text-decoration-none" to={`/${slug.slug}`}>
                                 <BsArrowLeftCircle className="btn-react-icons"/>
                             </Link>
                             <div className="btn-back">Atras</div>
                         </div>
-                        <div className="btn-react-opt">
+                        <div className="btn-react-opt w-50">
                             <Link className="btn-detalles w-100 m-1 p-2 border text-decoration-none" to={"/"}>
                                 <BsHeart className="btn-react-icons "/>
                             </Link>
                             <div className="btn-addFav">Favoritos</div>
                         </div>
-                        <div className="btn-react-opt">
+                        <div className="btn-react-opt w-100">
                             <Link className="btn-detalles react-iconsCart w-100 m-1 p-2 border text-decoration-none" to={"/"}>
                                 <BsCartPlus className="btn-react-icons" />
                             </Link>
