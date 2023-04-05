@@ -14,12 +14,16 @@ const FavsContainer = () => {
             <Row className="d-flex flex-row justify-content-center">
                 <Col lg={10}>
                     <h1 className="text-center my-4">Favoritos</h1>
-                    <button
-                        onClick={clearFavs}
-                        className="d-block ms-auto mb-2 bg-white fs-6 text-primary border-0 text-decoration-underline"
-                    >
-                        Eliminar Favoritos
-                    </button>
+                    {favsItems.length === 0 ? (
+                        <p>No ha marcado ningún producto como favorito</p>
+                    ) : (
+                        <button
+                            onClick={clearFavs}
+                            className="d-block ms-auto mb-2 bg-white fs-6 text-primary border-0 text-decoration-underline"
+                        >
+                            Eliminar Favoritos
+                        </button>
+                    )}
                     <ul className="p-3" style={{ border: "2px solid #d69c4f" }}>
                         <Container className="fav-item d-flex flex-column gap-3 p-0">
                             {favsItems.map((item) => (
