@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
-import Dropdown from "react-bootstrap/Dropdown"
 import { Link, NavLink } from "react-router-dom"
 import { parentCategories } from "../utils/mock-data/parentCategories"
 import { categories } from "../utils/mock-data/categories"
@@ -68,12 +67,18 @@ const NavBar = () => {
                             CartWidget
                         </Nav.Link>
                     </Nav>
-                    <Nav>
-                        <Nav.Link as={Link} to="favoritos">
-                            Favoritos
-                        </Nav.Link>
-                    </Nav>
-                    {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+                    {isAuthenticated ? (
+                        <>
+                            <Nav>
+                                <Nav.Link as={Link} to="favoritos">
+                                    Favoritos
+                                </Nav.Link>
+                            </Nav>
+                            <LogoutButton />
+                        </>
+                    ) : (
+                        <LoginButton />
+                    )}
                 </Navbar.Collapse>
             </Container>
         </Navbar>
